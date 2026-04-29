@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Interaction</title>
+<style>
+  body {
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+  }
+
+  .box {
+    border: 1px solid #ccc;
+    padding: 30px 40px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 180px;
+  }
+
+  #label {
+    font-size: 2rem;
+    color: black;
+    transition: color 0.15s;
+  }
+
+  button {
+    padding: 6px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    align-self: flex-start;
+  }
+</style>
+</head>
+<body>
+<div class="box">
+  <span id="label">Hello</span>
+  <button
+    onmouseover="document.getElementById('label').style.color='#e0339d'; document.getElementById('label').textContent='Hello';"
+    onmouseout="document.getElementById('label').style.color='black'; document.getElementById('label').textContent='Hello';"
+    onmousedown="document.getElementById('label').textContent='Mouse Click'; document.getElementById('label').style.color='#e0339d';"
+  >Button</button>
+</div>
+</body>
+</html>
